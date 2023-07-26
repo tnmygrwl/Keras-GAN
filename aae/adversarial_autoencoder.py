@@ -199,8 +199,8 @@ class AdversarialAutoencoder():
     def save_model(self):
 
         def save(model, model_name):
-            model_path = "aae/saved_model/%s.json" % model_name
-            weights_path = "aae/saved_model/%s_weights.hdf5" % model_name
+            model_path = f"aae/saved_model/{model_name}.json"
+            weights_path = f"aae/saved_model/{model_name}_weights.hdf5"
             options = {"file_arch": model_path,
                         "file_weight": weights_path}
             json_string = model.to_json()
