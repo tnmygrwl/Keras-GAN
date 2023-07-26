@@ -185,7 +185,7 @@ class Pix2Pix():
                 self.save_imgs(epoch)
 
     def save_imgs(self, epoch):
-        os.makedirs('images/%s' % self.dataset_name, exist_ok=True)
+        os.makedirs(f'images/{self.dataset_name}', exist_ok=True)
         r, c = 3, 3
 
         imgs_A, imgs_B = self.data_loader.load_data(batch_size=3, is_testing=True)

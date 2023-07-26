@@ -181,7 +181,7 @@ class COGAN():
 
     def save_imgs(self, epoch):
         r, c = 4, 4
-        noise = np.random.normal(0, 1, (r * int(c/2), 100))
+        noise = np.random.normal(0, 1, (r * (c // 2), 100))
         gen_imgs1 = self.g1.predict(noise)
         gen_imgs2 = self.g2.predict(noise)
 
